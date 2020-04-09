@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<body>
+<p id="demo"></p>
+<p id="task"></p>
+<p id="html"></p>
+ <script>
+     //Declaring variable name
+ var person = "Okebiorun Boluwatife"
+document.getElementById("demo").innerHTML = person;
+var courses;
+var text;
+var courseslength;
+var i;
+courses = ["HTML", "CSS" ,"JAVASCRIPT"];
+courseslength = courses.length;
+text = "<ul>";
+for (let i = 0; i < courseslength; i++) {
+    text = text + "<li>" + courses[i] + "</li>";
+}
+text = text + "</ul>";
+document.getElementById("task").innerHTML = text;
+// courses = ["HTML", "CSS" ,"JAVASCRIPT"];
+// courseslength = courses.length;
+// totalCourses = courses.length
+var remainder = courseslength % 2;
+var totalNumber = 200
+if (remainder == 0) {
+    var html ="<ul>";
+    for (let index = 1; index <= totalNumber; index++){
+        var evenRemainder = index % 2;
+       if (evenRemainder == 0) {
+           html += "<li>" + index + "</li>";
+       }
+    }
+    html += "</ul>";
+} else {
+    var html = "<ul>";
+    for (let index = 1; index <= totalNumber; index++) {
+        var evenRemainder = index % 2;
+        if (evenRemainder != 0) {
+            html += "<li>" + index + "</li>";
+        }
+    }
+    html += "</ul>";
+}
+document.getElementById("html").innerHTML = html;
+</script>
+</body>
